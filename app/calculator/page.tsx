@@ -396,6 +396,8 @@ export default function CalculatorPage() {
           Visualization
         </TabsTrigger>
       </TabsList>
+      <br></br>
+      <br></br>
 
 
 
