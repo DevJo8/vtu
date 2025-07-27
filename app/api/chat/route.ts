@@ -81,8 +81,8 @@ Respond as a helpful terminal assistant:`,
             threshold: "BLOCK_MEDIUM_AND_ABOVE",
           },
         ],
-      }),\
-    )
+      }),
+    );
 
     if (!response.ok) {
       const errorText = await response.text()
