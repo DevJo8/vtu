@@ -4,7 +4,6 @@ export async function POST(request: NextRequest) {
   try {
     const { message } = await request.json()
 
-    // Google AI API integration with better prompting
     const apiKey = process.env.GOOGLE_AI_API_KEY
 
     if (!apiKey) {
@@ -17,7 +16,6 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Updated API endpoint
     const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=${apiKey}`
 
     const response = await fetch(apiUrl, {
@@ -82,7 +80,7 @@ Respond as a helpful terminal assistant:`,
           },
         ],
       }),
-    );
+    })
 
     if (!response.ok) {
       const errorText = await response.text()
@@ -98,10 +96,12 @@ Respond as a helpful terminal assistant:`,
     }
 
     const data = await response.json()
-    let aiResponse =
-      data.candidates?.[0]?.content?.parts?.[0]?.text || "Command not recognized. Type 'help' for available commands."
 
-    // Clean up the response for terminal display
+    let aiResponse =
+      data?.candidates?.[0]?.content?.parts?.[0]?.text ||
+      "Command not recognized. Type 'help' for available commands."
+
+    // Clean up for terminal display
     aiResponse = aiResponse.replace(/\*\*/g, "").replace(/\*/g, "•").trim()
 
     return NextResponse.json({ response: aiResponse })
