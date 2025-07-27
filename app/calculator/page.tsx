@@ -382,7 +382,7 @@ export default function CalculatorPage() {
         </motion.div>
 
         <Tabs defaultValue="grading-system" className="w-full">
-          <TabsList className="grid w-full grid-cols-4 mb-8 bg-zinc-100 dark:bg-zinc-900">
+        <TabsList className="w-full mb-8 bg-zinc-100 dark:bg-zinc-900 grid grid-cols-2 sm:grid-cols-4 gap-2">
             <TabsTrigger value="grading-system" className="rounded-xl">
               Grading System
             </TabsTrigger>
