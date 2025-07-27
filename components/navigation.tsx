@@ -52,14 +52,16 @@ export default function Navigation() {
               <span className="text-xl font-bold text-black dark:text-white">VTU Vault</span>
             </Link>
             {/* News Headline - responsive on all screens */}
+            {/* News Headline - responsive on all screens */}
             <div className="flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full justify-center items-center pointer-events-none">
-              <span className="font-extrabold text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl text-center text-black dark:text-white tracking-widest drop-shadow-lg flex items-center gap-1 sm:gap-2 md:gap-3">
-                <span className="text-xs sm:text-sm md:text-lg lg:text-xl xl:text-2xl">📢</span>
-                <span className="text-red-600 dark:text-red-400 animate-[newsFlash_2s_ease-in-out_infinite] font-black text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl bg-gradient-to-r from-red-600 to-red-800 dark:from-red-400 dark:to-red-600 bg-clip-text text-transparent">
-                  Results Out ! 6th Sem
+              <span className="font-extrabold text-[10px] sm:text-sm md:text-lg lg:text-xl xl:text-2xl text-center text-black dark:text-white tracking-widest drop-shadow-lg flex items-center gap-[2px] sm:gap-2 md:gap-3">
+                <span className="text-[10px] sm:text-sm md:text-lg lg:text-xl xl:text-2xl">📢</span>
+                <span className="text-red-600 dark:text-red-400 animate-[newsFlash_2s_ease-in-out_infinite] font-black text-[10px] sm:text-sm md:text-base lg:text-lg xl:text-xl bg-gradient-to-r from-red-600 to-red-800 dark:from-red-400 dark:to-red-600 bg-clip-text text-transparent">
+                  Results out! 6th Sem
                 </span>
               </span>
             </div>
+
             {/* Desktop Actions */}
             <div className="hidden md:flex items-center space-x-2">
               <Button
