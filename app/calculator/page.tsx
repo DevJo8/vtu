@@ -381,21 +381,25 @@ export default function CalculatorPage() {
           <p className="text-zinc-600 dark:text-zinc-400">Understand VTU grading and calculate your SGPA & CGPA</p>
         </motion.div>
 
-        <Tabs defaultValue="grading-system" className="w-full">
-        <TabsList className="w-full mb-8 bg-zinc-100 dark:bg-zinc-900 grid grid-cols-2 sm:grid-cols-4 gap-2">
-            <TabsTrigger value="grading-system" className="rounded-xl">
-              Grading System
-            </TabsTrigger>
-            <TabsTrigger value="sgpa" className="rounded-xl">
-              SGPA Calculator
-            </TabsTrigger>
-            <TabsTrigger value="cgpa" className="rounded-xl">
-              CGPA Calculator
-            </TabsTrigger>
-            <TabsTrigger value="visualization" className="rounded-xl">
-              Visualization
-            </TabsTrigger>
-          </TabsList>
+            <Tabs defaultValue="grading-system" className="w-full">
+      <TabsList className="w-full mb-8 bg-zinc-100 dark:bg-zinc-900 grid grid-cols-2 sm:grid-cols-4 gap-2">
+        <TabsTrigger value="grading-system" className="rounded-xl w-full bg-zinc-100 dark:bg-zinc-900 text-center">
+          Grading System
+        </TabsTrigger>
+        <TabsTrigger value="sgpa" className="rounded-xl w-full bg-zinc-100 dark:bg-zinc-900 text-center">
+          SGPA Calculator
+        </TabsTrigger>
+        <TabsTrigger value="cgpa" className="rounded-xl w-full bg-zinc-100 dark:bg-zinc-900 text-center">
+          CGPA Calculator
+        </TabsTrigger>
+        <TabsTrigger value="visualization" className="rounded-xl w-full bg-zinc-100 dark:bg-zinc-900 text-center">
+          Visualization
+        </TabsTrigger>
+      </TabsList>
+
+
+
+
 
           {/* Grading System Explanation */}
           <TabsContent value="grading-system">
