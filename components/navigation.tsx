@@ -56,11 +56,21 @@ export default function Navigation() {
             <div className="hidden sm:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full justify-center items-center pointer-events-none">
   <span className="font-extrabold text-sm md:text-lg lg:text-xl xl:text-2xl text-center text-black dark:text-white tracking-widest drop-shadow-lg flex items-center gap-2 md:gap-3">
     <span className="text-sm md:text-lg lg:text-xl xl:text-2xl">📢</span>
-    <span className="text-red-600 dark:text-red-400 animate-[newsFlash_2s_ease-in-out_infinite] font-black text-sm md:text-base lg:text-lg xl:text-xl bg-gradient-to-r from-red-600 to-red-800 dark:from-red-400 dark:to-red-600 bg-clip-text text-transparent">
-      Results out! 6th Sem
+    <span className="text-red-600 dark:text-red-400 animate-[newsFlash_2s_ease-in-out_infinite] font-black text-sm md:text-base lg:text-lg xl:text-xl bg-gradient-to-r from-red-600 to-red-800 dark:from-red-400 dark:to-red-600 bg-clip-text text-transparent pointer-events-auto">
+    
+      <a 
+        href="https://results.vtu.ac.in/" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="pointer-events-auto"
+      >
+        Results out! 6th Sem
+      </a>
     </span>
   </span>
 </div>
+
+
 
 
             {/* Desktop Actions */}
