@@ -10,8 +10,7 @@ import {
   Lightbulb,
   ArrowRight,
   Sparkles,
-  Github,
-  Linkedin,
+  Twitter,
   Users,
   Zap,
   Shield,
@@ -486,19 +485,10 @@ export default function HomePage() {
                 variant="outline"
                 size="sm"
                 className="rounded-lg border-zinc-200 dark:border-zinc-800 bg-transparent text-xs px-2 py-1 md:px-3 md:py-2"
-                onClick={() => window.open('https://www.linkedin.com/in/afzal-basheer-127878264', '_blank')}
+                onClick={() => window.open('https://twitter.com/AfzalBasheer', '_blank')}
               >
-                <Linkedin className="h-2.5 w-2.5 md:h-3 md:w-3 mr-1" />
-                LinkedIn
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                className="rounded-lg border-zinc-200 dark:border-zinc-800 bg-transparent text-xs px-2 py-1 md:px-3 md:py-2"
-                onClick={() => window.open('https://github.com/Afzal74', '_blank')}
-              >
-                <Github className="h-2.5 w-2.5 md:h-3 md:w-3 mr-1" />
-                GitHub
+                <Twitter className="h-2.5 w-2.5 md:h-3 md:w-3 mr-1" />
+                Twitter
               </Button>
             </div>
           </motion.div>
