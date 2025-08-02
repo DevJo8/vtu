@@ -177,7 +177,7 @@ export default function HomePage() {
   }
 
   const handleCopyAddress = async () => {
-    const contractAddress = "0x742d35Cc6634C0532925a3b8D4C9db96C4b4d8b6"
+    const contractAddress = "COMING SOON"
     try {
       await navigator.clipboard.writeText(contractAddress)
       setCopied(true)
@@ -261,7 +261,7 @@ export default function HomePage() {
                   Contract Address
                 </span>
                 <span className="text-xs md:text-sm text-zinc-500 dark:text-zinc-500 font-mono hidden sm:inline">
-                  0x742d35Cc6634C0532925a3b8D4C9db96C4b4d8b6
+                  COMING SOON
                 </span>
                 <span className="text-xs text-zinc-500 dark:text-zinc-500 font-mono sm:hidden">
                   0x742d...8b6
