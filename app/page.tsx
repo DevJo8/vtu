@@ -17,12 +17,15 @@ import {
   Shield,
   Star,
   Crown,
+  Copy,
+  Check,
 } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { motion } from "framer-motion"
+import { useToast } from "@/hooks/use-toast"
 
 export default function HomePage() {
   const [searchQuery, setSearchQuery] = useState("")
@@ -30,6 +33,8 @@ export default function HomePage() {
   const [filteredContent, setFilteredContent] = useState<any[]>([])
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const [onlineUsers, setOnlineUsers] = useState(1247)
+  const [copied, setCopied] = useState(false)
+  const { toast } = useToast()
 
   const searchInputRef = useRef<HTMLInputElement>(null)
 
@@ -172,6 +177,28 @@ export default function HomePage() {
     }
   }
 
+  const handleCopyAddress = async () => {
+    const contractAddress = "0x742d35Cc6634C0532925a3b8D4C9db96C4b4d8b6"
+    try {
+      await navigator.clipboard.writeText(contractAddress)
+      setCopied(true)
+      toast({
+        title: "Address Copied!",
+        description: "Contract address has been copied to clipboard",
+        duration: 2000,
+      })
+      setTimeout(() => setCopied(false), 2000)
+    } catch (err) {
+      console.error('Failed to copy: ', err)
+      toast({
+        title: "Copy Failed",
+        description: "Failed to copy address to clipboard",
+        variant: "destructive",
+        duration: 3000,
+      })
+    }
+  }
+
   if (!mounted) return null
 
   return (
@@ -218,6 +245,35 @@ export default function HomePage() {
                 Your Academic Companion
               </span>
             </div>
+
+            {/* Contract Address Section */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="mb-4 md:mb-6"
+            >
+              <div 
+                className="inline-flex items-center gap-1 md:gap-2 px-3 md:px-4 py-2 rounded-full border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-900 mb-3 md:mb-4 cursor-pointer hover:bg-zinc-100 dark:hover:bg-zinc-800 transition-all duration-300 group shadow-sm hover:shadow-md"
+                onClick={handleCopyAddress}
+              >
+                <div className="w-2 h-2 md:w-2.5 md:h-2.5 bg-blue-500 rounded-full animate-pulse" />
+                <span className="text-xs md:text-sm text-zinc-600 dark:text-zinc-400 font-medium whitespace-nowrap">
+                  Contract Address
+                </span>
+                <span className="text-xs md:text-sm text-zinc-500 dark:text-zinc-500 font-mono hidden sm:inline">
+                  0x742d35Cc6634C0532925a3b8D4C9db96C4b4d8b6
+                </span>
+                <span className="text-xs text-zinc-500 dark:text-zinc-500 font-mono sm:hidden">
+                  0x742d...8b6
+                </span>
+                {copied ? (
+                  <Check className="h-3 w-3 md:h-4 md:w-4 text-green-500 animate-pulse" />
+                ) : (
+                  <Copy className="h-3 w-3 md:h-4 md:w-4 text-zinc-400 group-hover:text-zinc-600 dark:group-hover:text-zinc-300 transition-colors" />
+                )}
+              </div>
+            </motion.div>
 
             <h1 className="text-3xl md:text-5xl lg:text-7xl font-bold tracking-tight mb-3 md:mb-4">
               <span className="text-black dark:text-white">VTU</span>
