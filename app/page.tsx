@@ -485,7 +485,7 @@ export default function HomePage() {
                 variant="outline"
                 size="sm"
                 className="rounded-lg border-zinc-200 dark:border-zinc-800 bg-transparent text-xs px-2 py-1 md:px-3 md:py-2"
-                onClick={() => window.open('https://twitter.com/AfzalBasheer', '_blank')}
+                onClick={() => window.open('https://twitter.com/vtu_vault', '_blank')}
               >
                 <Twitter className="h-2.5 w-2.5 md:h-3 md:w-3 mr-1" />
                 Twitter
