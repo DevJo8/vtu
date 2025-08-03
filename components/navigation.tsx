@@ -59,12 +59,12 @@ export default function Navigation() {
     <span className="text-red-600 dark:text-red-400 animate-[newsFlash_2s_ease-in-out_infinite] font-black text-sm md:text-base lg:text-lg xl:text-xl bg-gradient-to-r from-red-600 to-red-800 dark:from-red-400 dark:to-red-600 bg-clip-text text-transparent pointer-events-auto">
     
       <a 
-        href="https://pump.fun" 
+        href="https://pump.fun/coin/3nXZb2JgHitNfBpdkXDHrFTSQP24Dxzqy3tooDK1JDt5" 
         target="_blank" 
         rel="noopener noreferrer" 
         className="pointer-events-auto"
       >
-        COMING SOON
+        LIVE ON PUMP.FUN
       </a>
     </span>
   </span>
